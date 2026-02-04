@@ -1,0 +1,58 @@
+{
+  "name": "ot",
+  "version": "0.0.1",
+  "description": "Twitch Bot",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "ts-node-dev --notify false --respawn false --tree-kill src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": [
+    "twitch",
+    "bot"
+  ],
+  "author": "Lennox O",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
+  "dependencies": {
+    "@mastondzn/dank-twitch-irc": "^7.2.1",
+    "@prisma/client": "^6.18.0",
+    "@twurple/api": "^7.4.0",
+    "@twurple/auth": "^7.4.0",
+    "@twurple/chat": "^7.4.0",
+    "@twurple/eventsub-http": "^7.4.0",
+    "@twurple/eventsub-ws": "^7.4.0",
+    "@types/readline-sync": "^1.4.8",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "humanize-duration": "^3.33.0",
+    "ioredis": "^5.6.1",
+    "node-cron": "^4.2.0",
+    "node-fetch": "^3.3.2",
+    "readline-sync": "^1.4.10",
+    "redis": "^5.1.1",
+    "tslog": "^4.9.3",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.3",
+    "zod": "^3.25.42"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "@types/express": "^5.0.5",
+    "@types/humanize-duration": "^3.27.4",
+    "@types/node": "^22.15.29",
+    "@types/node-cron": "^3.0.11",
+    "@types/ws": "^8.18.1",
+    "prisma": "^6.18.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}

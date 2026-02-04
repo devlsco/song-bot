@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id
+  name       String   @unique
+  permission Int      @default(0)
+  grantedAt  DateTime @default(now())
+}
+
+model Channel {
+  id            String         @id
+  name          String         @unique
+  joinedAt      DateTime       @default(now())
+  active        Boolean        @default(true)
+}
